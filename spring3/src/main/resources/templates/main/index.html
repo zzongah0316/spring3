@@ -2,9 +2,44 @@
 <html xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
     layout:decorate="~{layout/base_layout}">
-	  
+<head>
+  <meta charset="utf-8" />
+  <!-- 결제위젯 SDK 추가 -->
+  
+</head>	  
 <main layout:fragment="main">
-    <h1 th:text="|현재시간: ${now}|">현재 시간</h1>
+    <h1 th:text="|현재시간: ${now}|">현재 시간</h1>   
+
+
+  <div class="card-body">
+                <form method="post" id="payForm">
+                    <div class="my-2">
+                        <label for="amount" class="form-label">결제금액</label>
+                        <textarea class="form-control" id="amount" name="amount" required></textarea>
+                    </div>
+                    <div class="my-2">
+                        <label for="orderId" class="form-label">주문ID</label>
+                        <textarea class="form-control" id="orderId" name="orderId" required></textarea>
+                    </div>
+                    <div class="my-2">
+                        <label for="orderName" class="form-label">주문명</label>
+                        <textarea class="form-control" id="orderName" name="orderName" required></textarea>
+                    </div>
+                    <div class="my-2">
+                        <label for="customerName" class="form-label">구매자</label>
+                        <textarea class="form-control" id="customerName" name="customerName" required></textarea>
+                    </div>
+                </form>    
+  </div>
+  <!-- 결제위젯, 이용약관 영역 -->
+  <div id="payment-method"></div>
+  <div id="agreement"></div>
+  <!-- 결제하기 버튼 -->
+  <button id="payment-button">결제하기</button>
+
 </main>
-	
+	 <th:block layout:fragment="myscripts">
+        <script src="https://js.tosspayments.com/v1/payment-widget"></script>
+        <script src="/js/pay/payBtn.js"></script>
+    </th:block>
 </html>

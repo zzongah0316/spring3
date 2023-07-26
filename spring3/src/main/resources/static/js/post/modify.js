@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
 	   const content = document.querySelector('#content').value;
 	   if(title === '' || content ==='') {
 		   alert('제목과 내용은 반드시 입력...');
-		   return;
+		   return;''
 	   }
 	   
 	   const result = confirm('변경된 내용을 업데이트할까요?')
