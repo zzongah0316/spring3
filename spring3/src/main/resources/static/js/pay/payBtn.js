@@ -5,7 +5,15 @@
  document.addEventListener('DOMContentLoaded', ()=> {
 	const payForm = document.querySelector('#payForm');
 	const btnUpdate = document.querySelector('#payment-button');
+	const amount = document.querySelector('#amount');
+	const orderId = document.querySelector('#orderId');
+	const orderName = document.querySelector('#orderName');
+	const customerName = document.querySelector('#customerName');
 	btnUpdate.addEventListener('click', (e) =>{
+	console.log("amount:"+amount.value);
+	console.log("orderId:" + orderId.value);
+	console.log("orderName:" + orderName.value);
+	console.log("customerName:" + customerName.value);
 		
 	   
 var secretKey = 'test_sk_D4yKeq5bgrpOzzY45e0VGX0lzW6Y'
@@ -17,10 +25,10 @@ var tossPayments = TossPayments(clientKey)
       // 결제 정보 파라미터
       // 더 많은 결제 정보 파라미터는 결제창 Javascript SDK에서 확인하세요.
       // https://docs.tosspayments.com/reference/js-sdk
-      amount: 100, // 결제 금액
-      orderId: 'uuYls2Ka_Tje8qA-QuE1c', // 주문 ID(주문 ID는 상점에서 직접 만들어주세요.)
-      orderName: '테스트 결제', // 주문명
-      customerName: '김토스', // 구매자 이름
+      amount: amount.value, // 결제 금액
+      orderId: orderId.value, //'uuYls2Ka_Tje8qA-QuE1c', // 주문 ID(주문 ID는 상점에서 직접 만들어주세요.)
+      orderName: orderName.value, //'테스트 결제', // 주문명
+      customerName: customerName.value, //'김토스', // 구매자 이름
       successUrl: 'http://localhost:8090/test-success', // 결제 성공 시 이동할 페이지(이 주소는 예시입니다. 상점에서 직접 만들어주세요.)
       failUrl: 'http://localhost:8090/test-fail', // 결제 실패 시 이동할 페이지(이 주소는 예시입니다. 상점에서 직접 만들어주세요.)
     })
