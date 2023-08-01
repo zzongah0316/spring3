@@ -12,7 +12,7 @@
 
 
   <div class="card-body">
-                <form method="post" id="payForm">
+                <form method="post" id="payForm" th:action="@{/main/test}">
                     <div class="my-2">
                         <label for="amount" class="form-label">결제금액</label>
                         <textarea class="form-control" id="amount" name="amount" required></textarea>
@@ -29,6 +29,8 @@
                         <label for="customerName" class="form-label">구매자</label>
                         <textarea class="form-control" id="customerName" name="customerName" required></textarea>
                     </div>
+                    
+                    <button type="submit" id="payment-button2">상품</button>
                 </form>    
   </div>
   <!-- 결제위젯, 이용약관 영역 -->
@@ -36,6 +38,7 @@
   <div id="agreement"></div>
   <!-- 결제하기 버튼 -->
   <button id="payment-button">결제하기</button>
+  
 
 </main>
 	 <th:block layout:fragment="myscripts">
