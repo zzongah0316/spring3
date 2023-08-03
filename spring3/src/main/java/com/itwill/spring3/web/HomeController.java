@@ -56,6 +56,14 @@ public class HomeController {
         return "/main/test"; // View의 이름.
     }
     
+    @GetMapping("/main")
+    public String main() {
+        
+        log.info("main()");
+             
+        return "/main/main"; // View의 이름.
+    }
+    
     
     @GetMapping("/test-success")
     public String tossPaymentSuccess(

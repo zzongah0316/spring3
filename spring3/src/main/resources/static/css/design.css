@@ -8,7 +8,7 @@
 #order_wrap .left img {width:100%;}
 #order_wrap .right {width:calc(100% - 550px); padding-left: 10px;}
 #order_wrap .right .top {}
-#order_wrap .right .top h1 {font-size:1.2rem; padding:20px 0;}
+#order_wrap .right .top h1 {font-size:2rem; padding:20px 0;}
 #order_wrap .right .top > p:nth-child(2) {
     color:#aaa; margin-bottom:10px; padding-bottom:10px;
     border-bottom:1px solid #dadada;
@@ -27,7 +27,7 @@
     border-bottom:1px solid #ddd;
     border-top:1px solid #ddd;
 }
-#order_wrap .right .top .number .order_name {}
+#order_wrap .right .top .number .order_name {padding-top: 10px;}
 #order_wrap .right .top .number .order_number {}
 #order_wrap .right .top .number .order_number input[name=num] {
     background: #fff; width:50px; padding:5px;
@@ -39,6 +39,7 @@
     justify-content:space-between;
     padding:20px 0;
 }
+#order_wrap .right .top .action {padding-left: 20px;}
 #order_wrap .right .top .total_price p {}
 #order_wrap .right .top .total_price p:nth-child(1) {}
 #order_wrap .right .top .total_price .result_price {color: #cc0202; font-size:1.2rem;}
